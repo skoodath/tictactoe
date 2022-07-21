@@ -14,18 +14,34 @@
   <main>
     <div class="main--container">
       <nav class="menubar">
-        <span class="menu--button" data-button="start">Start</span>
+          <label for="select-x" class="player--name-box">
+            <input type="radio" name="player" id="select-x" value="X">
+            <span class="player--name">X</span>
+          </label>
+          <label for="select-o" class="player--name-box">
+            <input type="radio" name="player" id="select-o" value="O">
+            <span class="player--name">O</span>
+          </label>
       </nav>
-      <section class="game--container">
-        <div class="game--cell bottom--right" data-value="0"></div>
-        <div class="game--cell bottom--right" data-value="1"></div>
-        <div class="game--cell bottom" data-value="2"></div>
-        <div class="game--cell bottom--right" data-value="3"></div>
-        <div class="game--cell bottom--right" data-value="4"></div>
-        <div class="game--cell bottom" data-value="5"></div>
-        <div class="game--cell right" data-value="6"></div>
-        <div class="game--cell right" data-value="7"></div>
-        <div class="game--cell" data-value="8"></div>
+      <section id="current-player" class="player--turn">
+      </section>
+      <div class="game--wrapper">
+        <section class="game--container">
+          <div class="game--cell bottom--right" data-value="0"></div>
+          <div class="game--cell bottom--right" data-value="1"></div>
+          <div class="game--cell bottom" data-value="2"></div>
+          <div class="game--cell bottom--right" data-value="3"></div>
+          <div class="game--cell bottom--right" data-value="4"></div>
+          <div class="game--cell bottom" data-value="5"></div>
+          <div class="game--cell right" data-value="6"></div>
+          <div class="game--cell right" data-value="7"></div>
+          <div class="game--cell" data-value="8"></div>
+          <div class="strike"></div>
+        </section>
+      </div>
+      <section id="game-result" class="game--result hidden">
+        <span class="game--result_msg"></span>
+        <span class="game--restart">Start Again</span>
       </section>
     </div>
   </main>
