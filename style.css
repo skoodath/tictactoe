@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 :root {
   --primarycolor: #a83e3e;
   --secondcolor: #3EA8A8;
@@ -10,12 +12,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  letter-spacing: 2px;
 }
 html {
   font-size: 16px;
 }
 body {
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: 'Luckiest Guy', cursive;
   overflow: hidden;
 }
 /* Header styling */
@@ -25,9 +28,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2rem 0 0;
 }
 .title {
   color: var(--secondcolor);
+  text-shadow: 2px 3px 5px #000;
+  font-size: 3rem;
 }
 
 /* Game container styling */
@@ -40,11 +46,9 @@ body {
   margin: 0 auto;
 }
 .menubar {
-  flex: 0 0 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #ddd;
 }
 .menu--button {
   background-color: #dedede;
@@ -63,15 +67,31 @@ body {
   grid-template-rows: repeat(3, 80px);
   justify-content: center;
   align-items: center;
+  gap: 5px;
+  /*border-radius: 35px;
+  overflow: hidden;*/
+}
+.translate--top-left {
+  transform: translateY(-5px) rotate(5deg);
+}
+.translate--bottom-right {
+  transform: translateY(5px) rotate(5deg);
+}
+.translate--top-right {
+  transform: translateY(-5px) rotate(-5deg);
+}
+.translate--bottom-left {
+  transform: translateY(5px) rotate(-5deg);
 }
 .game--cell {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  color: var(--highlighter);
+  font-size: 2.5rem;
+  color: #fff;
   cursor: pointer;
+  background-color: #00006ae7;
 }
 
 .player--name-box {
@@ -81,6 +101,7 @@ body {
 .player--name {
   font-size: 2rem;
   vertical-align: middle;
+  color: #3E3EA8;
 }
 
 .player--turn{
@@ -90,7 +111,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #efefef;
   color: var(--primarycolor);
   font-size: 1.5rem;
 }
@@ -114,9 +134,10 @@ body {
   margin: 0 0 1rem 0;
 }
 .game--restart {
-  background-color: var(--highlighter);
+  background-color: var(--extracolor);
   color: #fff;
   padding: 1rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   cursor: pointer;
   box-shadow: 1px 1px 2px rgba(0,0,0,0.25), -1px -1px 2px rgba(0,0,0,0.25);

@@ -32,7 +32,6 @@ const choosePlayer = (event) => {
   if(event.target.checked) {
     nextPlayer.innerHTML = `Next player: ${selectedPlayer}`;
     playerTurn = selectPlayer;
-    menubar.style.visibility = "hidden";
   }
 }
 
@@ -59,9 +58,9 @@ gameRestart.addEventListener("click", startGame);
 /* Game over function displays results*/
 
 const gameOver = (winner) => {
-  let textContent = "It is a draw";
+  let textContent = "It's a draw";
   if(winner !== '') {
-    textContent = `${winner} is the winner!!`;
+    textContent = `The winner is "${winner}"`;
   }
   playedArray.fill("");
   gameResultMessage.innerHTML = textContent;
@@ -96,6 +95,7 @@ const decisionMaker = () => {
 const playGame = (event) => {
   const cell = event.target;
   const cellValue = cell.dataset.value;
+  menubar.style.visibility = "hidden";
   if(gameResultContainer.classList.contains("visible")){
     return;
   }
